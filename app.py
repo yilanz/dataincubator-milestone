@@ -15,7 +15,9 @@ def stock_func():
 		app.vars['stock_name'] = request.form['stock_name']
 		app.vars['features'] = request.form['features']
 		return render_template('stock_plot.html',stock_name = app.vars['stock_name'],features=app.vars['features'])
-
+#@app.route('/stock_plot',methods=['POST'])
+#def stock_plot():
+	
 if __name__ == '__main__':
   app.run(port=33507,debug = True)
   

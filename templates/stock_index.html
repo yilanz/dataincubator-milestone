@@ -1,0 +1,24 @@
+<!doctype html>
+<title>Daily Stock Closing Price</title>
+<link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_stock.css')}}'>
+<div class=page>
+  <h1>Daily Stock Closing Price</h1>
+  <div class=metanav>
+
+    <h4>
+      Please input your stock ticket name (eg. GOOG), 
+		I will fetch the daily closing price for you!
+    </h4>
+
+    <form id='stock_price' method='POST' action='stock_index' >
+      <p>
+    Ticker symbol: <input type='text' name='stock_name' />
+      </p>
+		
+      <p>
+    <input type='submit' value='Submit' />
+      </p>
+    </form>
+
+  </div>
+</div>

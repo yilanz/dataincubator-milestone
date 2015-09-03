@@ -11,5 +11,5 @@ def stock_index():
 		return 'reqeust.method was not a GET!'
 	
 if __name__ == '__main__':
-	app_stock.run(debug = True)
+	app_stock.run(port=33507,debug = True)
 	

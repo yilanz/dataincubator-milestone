@@ -7,7 +7,7 @@ def main():
   return redirect('/index')
 
 @app.route('/index', methods=['GET','POST'])
-def stock_index():
+def stock_func():
 	nquestion = 4
 	if request.method == 'GET':
 		return render_template('stock_index.html')

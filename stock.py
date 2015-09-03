@@ -6,7 +6,7 @@ app_stock = Flask(__name__)
 def stock_index():
 	nquestion = 4
 	if request.method == 'GET':
-		return render_template('stock_plot.html',num = nquestion)
+		return render_template('stock_plot.html')
 	else:
 		return 'reqeust.method was not a GET!'
 	

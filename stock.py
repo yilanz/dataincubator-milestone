@@ -2,7 +2,7 @@ from falsk import Flask, render_template, request
 
 app_stock = Flask(__name__)
 
-@app_stock.route('/',method=['GET','POST'])
+@app_stock.route('/',methods=['GET','POST'])
 def stock_index():
 	nquestion = 4
 	if request.method == 'GET':

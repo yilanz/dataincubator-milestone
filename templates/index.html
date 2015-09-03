@@ -1,5 +1,5 @@
 <!doctype html>
-<title>A short quiz</title>
+<title>Daily Stock Closing Price</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_stock.css')}}'>
 <div class=page>
   <h1>Daily Stock Closing Price</h1>
@@ -10,12 +10,12 @@
 		I will fetch the daily closing price for you!
     </h4>
 
-    <form id='stock_price' method='post' action='index' >
+    <form id='stock_price' method='POST' action='index' >
       <p>
     Ticker symbol: <input type='text' name='stock_name' />
       </p>
+		
       <p>
-    
     <input type='submit' value='stock_submit' />
       </p>
     </form>

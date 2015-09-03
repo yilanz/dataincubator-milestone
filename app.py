@@ -12,7 +12,10 @@ def stock_func():
 	if request.method == 'GET':
 		return render_template('stock_index.html')
 	else:
-		return 'reqeust.method was not a GET!'
+		app.vars['stock_name'] = request.form['stock_name']
+		app.vars['features'] = request.form['features']
+		return render_template('stock_plot.html')
 
 if __name__ == '__main__':
   app.run(port=33507,debug = True)
+  

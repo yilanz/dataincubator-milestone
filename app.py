@@ -14,10 +14,10 @@ def stock_func():
 	else:
 		app.vars['stock_name'] = request.form['stock_name']
 		app.vars['features'] = request.form['features']
-		return redirect('/stock_plot',app.vars)
+		return redirect('/stock_plot')
 
 @app.route('/stock_plot',methods=['POST'])
-def stock_plot(app.vars):
+def stock_plot():
 	return render_template('stock_plot.html',stock_name = app.vars['stock_name'],features=app.vars['features'])
 
 	

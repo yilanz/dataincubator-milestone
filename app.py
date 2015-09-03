@@ -14,7 +14,7 @@ def stock_func():
 	else:
 		app.vars['stock_name'] = request.form['stock_name']
 		app.vars['features'] = request.form['features']
-		return redirect('/stock_plot')
+		return redirect(url_for('stock_plot'))
 
 @app.route('/stock_plot',methods=['POST'])
 def stock_plot():

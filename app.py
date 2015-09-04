@@ -12,10 +12,11 @@ def stock_func():
 	if request.method == 'GET':
 		return render_template('stock_index.html')
 	else:
-		app.vars['stock_name'] = request.form['stock_name']
-		app.vars['features'] = request.form['features']
-		print app.vars
-		return redirect(url_for('stock_plot'))
+		#print 'inside else'
+		#app.vars['stock_name'] = request.form['stock_name']
+		#app.vars['features'] = request.form['features']
+		#print app.vars
+		return redirect('/stock_plot')
 
 @app.route('/stock_plot',methods=['POST'])
 def stock_plot():

@@ -1,13 +1,24 @@
 <!doctype html>
+<head>
 <title>Daily Stock Closing Price</title>
 <link rel=stylesheet type=text/css href='{{ url_for('static',filename='style_stock.css')}}'>
+
+</head>
 <div class=page>
   <h1>Daily Stock Closing Price</h1>
   <div class=metanav>
 
     <h4>
-      Stock price for {{stock_name}} of {{features}}
+      Stock price for {{stock_name}} 
     </h4>   
 
   </div>
+  <body>
+
+	{{ plot_resources|indent(1)|safe }}
+
+   {{ plot_script|indent(1)|safe }}  
+   {{ plot_div|indent(1)|safe }}
+
+	</body>
 </div>
